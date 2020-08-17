@@ -52,7 +52,8 @@ public class ConvertStr {
 			if(sChars[i] == s2Chars[index]) {
 				word.add(sChars[i]);
 				index++;
-				
+				System.out.println(word.toString() + " " + s2);
+
 				if(word.toString() == s2) {
 					return true;
 				}
