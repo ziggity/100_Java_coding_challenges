@@ -29,34 +29,23 @@ The result string after replacing all of its characters.
  */
 public class AlphabetShift {
 	public static void main(String[] args) {
-		String alpha = "helloworld";
-		System.out.println(alphabetShifter(alpha));
+		String alpha = "a ! helloworld ?/';:[]}{| =- 0987654321 z";
+		System.out.println(alphabetShifter(alpha, 10));
 	}
 
-	private static ArrayList alphabetShifter(String alpha) {
-//		alpha.toCharArray(); 
-//		String[] a = alpha.split("");
-//		ArrayList answer = new ArrayList<>();
-//		for(int z = 0; z < a.length; z++ ) {
-//			if(a[z] == "z") {
-//				a[z] = "_";
-//			}
-//			answer.add(a[z]);
-//		}
-//		for(int i = 0; i<answer.size(); i++) {
-//			if(answer.get(i) == "_") {
-//				answer.add("a");
-//				answer.remove(i);
-//			} else {
-//				char c = (char) answer.get(i);
-//				answer.remove(i);
-//				
-//				answer.add(Character.toString(c));
-//			
-//			}
-//		}
-//		return answer;
-	}
+	private static String alphabetShifter(String msg, int shift) {
+
+		    String s = "";
+		    int len = msg.length();
+		    for(int x = 0; x < len; x++){
+		        char c = (char)(msg.charAt(x) + shift);
+		        if (c > 'z')
+		            s += (char)(msg.charAt(x) - (26-shift));
+		        else
+		            s += (char)(msg.charAt(x) + shift);
+		    }
+		    return s;
+		}
 	
 	
 }
