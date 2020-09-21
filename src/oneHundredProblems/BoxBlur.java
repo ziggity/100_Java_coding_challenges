@@ -53,15 +53,15 @@ public class BoxBlur {
 
 	private static ArrayList boxBlur(int[][] image) {
 		ArrayList result = new ArrayList<>();
-		
 		for(int y = 0; y < image[y].length -2; y++) {
-			System.out.println(y);
 			ArrayList line = new ArrayList<>();
 			for(int x = 0; x < image[y].length-2; x++) {
 				int sum = 0; 
 				int count = 0;
 				for(int a = y; a < y + 3; a++) {
 					for(int b = x; b < x+3;b++) {
+						System.out.println(y +"" +b + ""  + x);
+
 						if((b  < 2) && (a < 2)) {
 							System.out.println(image[a][b]);
 							sum += image[a][b];
@@ -69,6 +69,7 @@ public class BoxBlur {
 						count++;
 					}
 				}
+				System.out.println(sum + " count" + count);
 				line.add(Math.floor(sum/count));
 			}
 			result.add(line);
