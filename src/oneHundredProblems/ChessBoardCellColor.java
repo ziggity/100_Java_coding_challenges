@@ -1,4 +1,9 @@
 package oneHundredProblems;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /*
  * Given two cells on the standard chess board, determine whether they have the same color or not.
 
@@ -23,9 +28,26 @@ true if both cells have the same color, false otherwise.
 
  */
 public class ChessBoardCellColor {
-
 	public static void main(String[] args) {
+	
+
+	}	
+	
+	public List createListWithEveryOtherElement(List list) {
+
+        List names = Arrays.asList("Rhonda", "Marissa", "Alexis", "Devon", "Adrian", "Tiana");
+        List everyOtherName = everyOtherElement(names);
+        System.out.println(everyOtherName);
+        System.out.println(names.get(4));
+    }
+
+    private static List everyOtherElement(List<String> names) {
+        List<String> list = new ArrayList<String>();
+
+        for(int index = 0; index < names.size(); index += 2) {
+            list.add(names.get(index));
+        }
+        return list;
+    }
 
 	}
-
-}
