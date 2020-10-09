@@ -11,20 +11,36 @@ import java.util.Scanner;
 
 public class ZachTest {
 
+	public static void main(String[] args) {
 
-
-public static void main(String[] args) {
-
-
-
-int i = 1;
-
-for (i = 1; i < 100; i = i + 2) {
-    System.out.println(i);
-    }
+		// TODO Auto-generated method stub
 
 
 
+		System.out.println(createStringCount(844));
 
 
-}}
+
+	}
+
+
+
+	public static String createStringCount( int a) {
+
+			StringBuilder newWord=new StringBuilder("");
+
+			
+
+			Integer newWord1= new Integer(a);
+
+			 String newWord2=  newWord1.toString();
+
+			
+
+			
+
+			return newWord2;
+
+	}
+
+}
