@@ -12,35 +12,22 @@ import java.util.Scanner;
 public class ZachTest {
 
 	public static void main(String[] args) {
+		
+		String words = "za";
+		int times = 5;
+		String newWord = "";
 
-		// TODO Auto-generated method stub
+		for (int z = 0; z < times; z++ ) {
 
+		newWord = newWord + words;
 
+		}
 
-		System.out.println(createStringCount(844));
+System.out.println(newWord);
+		}
 
-
-
-	}
-
-
-
-	public static String createStringCount( int a) {
-
-			StringBuilder newWord=new StringBuilder("");
-
-			
-
-			Integer newWord1= new Integer(a);
-
-			 String newWord2=  newWord1.toString();
-
-			
-
-			
-
-			return newWord2;
 
 	}
 
-}
+
+
