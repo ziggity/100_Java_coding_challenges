@@ -43,7 +43,7 @@ class MinRewards {
 		System.out.println();
 	}
 
-	//Approach 2: LocalMin Approach here
+	//Approach 2: LocalMin Approach here k
 
 	static ArrayList<Integer> localMin(int []a, int n) {
 		ArrayList<Integer> list = new ArrayList<>();
