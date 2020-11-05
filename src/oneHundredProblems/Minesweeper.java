@@ -15,7 +15,7 @@ minesweeper(matrix) = [[1, 2, 1], [2, 1, 1], [1, 1, 1]]
 Check out the image below for better understanding:
 
 
-
+//
 Input/Output
 
 [time limit] 4000ms (js)
