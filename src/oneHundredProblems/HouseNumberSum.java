@@ -23,13 +23,20 @@ Guaranteed constraints:
 
 [output] integer
  */
+/*
+ * Version 2.0 (Find the longest string of houses connected together before finding a house with a 0)
+ */
 public class HouseNumberSum {
 
 	public static void main(String[] args) {
-		int[] houseNumbers = {5, 1, 2, 3, 0, 1, 5, 0, 2};
+		int[] houseNumbers = {5, 1, 2, 3, 0, 1, 5, 0, 2, 9, 8, 3, 1, 8, 0, 1,0};
 		System.out.println(houseNumberSum(houseNumbers));
+		System.out.print(" version 2 :");
+		System.out.println(houseNumberSum2(houseNumbers));
 
 	}
+
+	
 
 	private static int houseNumberSum(int[] houseNumbers) {
 		int count = 0;
@@ -42,4 +49,24 @@ public class HouseNumberSum {
 		return count;
 	}
 
+	private static int houseNumberSum2(int[] houseNumbers) {
+		int temp = 0;
+		int count = 0;
+		for(int i = 0; i < houseNumbers.length; i++) {
+			count += houseNumbers[i];
+			if(houseNumbers[i] == 0) {
+				if(temp < count && i != houseNumbers.length-1) {
+					temp = count;
+					count = 0;
+				}
+				if(i == houseNumbers.length -1) {
+					System.out.println(count + " count");
+					System.out.println(temp + " temp");
+					return Math.max(count, temp);
+				}
+				
+			}
+		}
+		return count;
+	}
 }
