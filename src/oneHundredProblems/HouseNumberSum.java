@@ -24,7 +24,7 @@ Guaranteed constraints:
 [output] integer
  */
 /*
- * Version 2.0 (Find the longest string of houses connected together before finding a house with a 0)
+ * Version 2.0 (Find the longest combined values of houses connected together before finding a house with a 0)
  */
 public class HouseNumberSum {
 
@@ -50,12 +50,13 @@ public class HouseNumberSum {
 	}
 
 	private static int houseNumberSum2(int[] houseNumbers) {
-		int temp = 0;
+		int temp = -1;
 		int count = 0;
 		for(int i = 0; i < houseNumbers.length; i++) {
 			count += houseNumbers[i];
 			if(houseNumbers[i] == 0) {
 				if(temp < count && i != houseNumbers.length-1) {
+					System.out.println(temp + " " + count);
 					temp = count;
 					count = 0;
 				}
